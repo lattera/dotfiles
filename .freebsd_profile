@@ -21,4 +21,7 @@ PAGER=less;  	export PAGER
 # set ENV to a file invoked each time sh is started for interactive use.
 ENV=$HOME/.shrc; export ENV
 
+alias buildkernel='make -DNO_CLEAN WITH_CTF=1 buildkernel KERNCONF=SEC'
+alias installkernel='make installkernel KERNCONF=SEC'
+
 if [ -x /usr/games/fortune ] ; then /usr/games/fortune freebsd-tips ; fi
