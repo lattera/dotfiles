@@ -9,3 +9,7 @@ rm -f .tmux.conf
 ln -s ~/dotfiles/.vimrc .vimrc
 ln -s ~/dotfiles/.freebsd_profile .profile
 ln -s ~/dotfiles/.tmux.conf .tmux.conf
+
+if [ ! -d tmux/logs ]; then
+    mkdir -p tmux/logs
+fi
