@@ -1,9 +1,9 @@
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
-HISTSIZE=99999999999
-SAVEHIST=99999999999
+HISTSIZE=999999999999
+SAVEHIST=999999999999
 setopt autocd
-setopt promptsubst
+bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/shawn/.zshrc'
