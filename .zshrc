@@ -33,8 +33,10 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+# Customize to your needs...
+
 function paste() {
     curl -n -F 'f:1=<-' http://ix.io
 }
 
-# Customize to your needs...
+export PS1='%{$fg[$NCOLOR]%}%B%m[%n]%b%{$reset_color%}:%{$fg[blue]%}%B%c/%b%{$reset_color%} $(git_prompt_info)%(!.#.$) '
