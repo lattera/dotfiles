@@ -40,3 +40,4 @@ function paste() {
 }
 
 export PS1='%{$fg[$NCOLOR]%}%B%m[%n]%b%{$reset_color%}:%{$fg[blue]%}%B%c/%b%{$reset_color%} %(!.#.$) '
+export EDITOR=vim
