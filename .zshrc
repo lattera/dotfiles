@@ -39,5 +39,5 @@ function paste() {
     curl -n -F 'f:1=<-' http://ix.io
 }
 
-export PS1='%{$fg[$NCOLOR]%}%B%m[%n]%b%{$reset_color%}:%{$fg[blue]%}%B%c/%b%{$reset_color%} %(!.#.$) '
+export PS1='%{$fg[$NCOLOR]%}%B%m[%n]%b%{$reset_color%}:%{$fg[blue]%}%B%d%b%{$reset_color%} %(!.#.$) '
 export EDITOR=vim
