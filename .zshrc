@@ -41,3 +41,7 @@ function paste() {
 
 export PS1='%{$fg[$NCOLOR]%}%B%m[%n]%b%{$reset_color%}:%{$fg[blue]%}%B%d%b%{$reset_color%}%(?.. (%{$fg[red]%}%?%{$reset_color%}%)) %(!.#.$) '
 export EDITOR=vim
+
+if [ -f $HOME/dotfiles/env.sh ]; then
+    source $HOME/dotfiles/env.sh
+fi
