@@ -39,7 +39,7 @@ function paste() {
     curl -n -F 'f:1=<-' http://ix.io
 }
 
-export PS1='%{$fg[$NCOLOR]%}%B%m[%n]%b%{$reset_color%}:%{$fg[blue]%}%B%d%b%{$reset_color%}%(?.. (%{$fg[red]%}%?%{$reset_color%}%)) %(!.#.$) '
+PROMPT='%{$fg[$NCOLOR]%}%B%m[%n]%b%{$reset_color%}:%{$fg[blue]%}%B%d%b%{$reset_color%}%(?.. (%{$fg[red]%}%?%{$reset_color%}%)) %(!.#.$) '
 export EDITOR=vim
 
 if [ -f $HOME/dotfiles/env.sh ]; then
