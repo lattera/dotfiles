@@ -1,8 +1,8 @@
-#!/bin/sh
-
-cd ~
+#!/usr/bin/env zsh
 
 GIT=$(which git)
+
+cd ~
 
 rm -f .profile
 rm -f .tmux.conf
@@ -20,9 +20,15 @@ if [ ! -d .vim ] && [ ! ${#GIT} -eq 0 ] || [ ! -f .vimrc ] ; then
     )
 fi
 
+if [ ! -d .oh-my-zsh ]; then
+    git clone git://github.com/lattera/oh-my-zsh.git .oh-my-zsh
+fi
+
+sed "s,__PLUGINS__,${1}," ~/dotfiles/zshrc.templ > ~/dotfiles/zshrc
+
 ln -s ~/dotfiles/.freebsd_profile .profile
 ln -s ~/dotfiles/.tmux.conf .tmux.conf
-ln -s ~/dotfiles/.zshrc .zshrc
+ln -s ~/dotfiles/zshrc .zshrc
 
 if [ ! -d tmux/logs ]; then
     mkdir -p tmux/logs
