@@ -8,6 +8,10 @@ set spoolfile = "+INBOX"
 set postponed = "+[Google Mail]/Drafts"
 #set trash = "+[Google Mail]/Trash"
 
+set sort = threads
+folder-hook . 'push <collapse-all>'
+bind index - collapse-thread
+
 set header_cache =~/.mutt/cache/headers
 set message_cachedir=~/.mutt/cache/bodies
 set certificate_file=~/.mutt/certificates
