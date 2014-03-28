@@ -11,6 +11,7 @@ set postponed = "+[Google Mail]/Drafts"
 set sort = threads
 folder-hook . 'push <collapse-all>'
 bind index - collapse-thread
+bind index _ collapse-all
 
 set header_cache =~/.mutt/cache/headers
 set message_cachedir=~/.mutt/cache/bodies
