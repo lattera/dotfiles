@@ -3,11 +3,6 @@ set realname = "Shawn Webb"
 
 source .mutt/credentials
 
-set folder = "imaps://imap.gmail.com:993"
-set spoolfile = "+INBOX"
-set postponed = "+[Google Mail]/Drafts"
-#set trash = "+[Google Mail]/Trash"
-
 set sort = threads
 folder-hook . 'push <collapse-all>'
 bind index - collapse-thread
