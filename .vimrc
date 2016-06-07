@@ -34,6 +34,7 @@
     set nobackup " make NO backup files
     set clipboard+=unnamed " share windows clipboard
     set directory=/tmp " directory to place swap files in
+    set undodir=/tmp
     set fileformats=unix,dos,mac " support all three, in this order
     set iskeyword+=_,$,@,%,# " none of these are word dividers
     set noerrorbells " don't make noise
@@ -111,21 +112,24 @@
 
 " Text Formatting/Layout {
     set completeopt= " don't use a pop up menu for completions
-    set expandtab " no real tabs please!
-    set formatoptions=rq " Automatically insert comment leader on return,
+"    set expandtab " no real tabs please!
+    set formatoptions=trq " Automatically insert comment leader on return,
                           " and let gq format comments
     set ignorecase " case insensitive by default
     set infercase " case inferred by default
     set nowrap " do not wrap line
     set shiftround " when at 3 spaces, and I hit > ... go to 4, not 5
     set smartcase " if there are caps, go case-sensitive
-    set shiftwidth=4 " auto-indent amount when using cindent,
+    set shiftwidth=2 " auto-indent amount when using cindent,
                       " >>, << and stuff like that
-    set softtabstop=4 " when hitting tab or backspace, how many spaces
+"    set softtabstop=4 " when hitting tab or backspace, how many spaces
                        "should a tab be (see expandtab)
-    set tabstop=4 " real tabs should be 8, and they will show with
+"    set tabstop=4 " real tabs should be 8, and they will show with
                    " set list on
     set smarttab
+    set sw=8
+    set bs=2
+    set tw=70
 " }
 
 " Folding {
