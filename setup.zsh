@@ -13,18 +13,6 @@ rm -f .i3/config
 rm -f .i3status.conf
 rm -f .muttrc
 
-if [ ! -d .vim ] && [ ! ${#GIT} -eq 0 ] || [ ! -f .vimrc ] ; then
-    rm -f .vimrc
-    rm -rf .vim
-    git clone git://github.com/lattera/vimconfig.git .vim
-    (
-        cd .vim
-        git submodule init
-        git submodule update
-        ln -s ~/.vim/vimrc ~/.vimrc
-    )
-fi
-
 if [ ! -d .mutt ]; then
     mkdir -p .mutt/cache/headers/../bodies
     touch .mutt/certificates
@@ -34,7 +22,7 @@ if [ ! -d .mutt ]; then
 fi
 
 if [ ! -d .oh-my-zsh ]; then
-    git clone git://github.com/lattera/oh-my-zsh.git .oh-my-zsh
+    git clone https://github.com/lattera/oh-my-zsh.git .oh-my-zsh
 fi
 
 plugins=""
@@ -67,6 +55,7 @@ ln -s ~/dotfiles/.freebsd_profile .profile
 ln -s ~/dotfiles/.tmux.conf .tmux.conf
 ln -s ~/dotfiles/zshrc .zshrc
 ln -s ~/dotfiles/muttrc .muttrc
+ln -s ~/dotfiles/.vimrc .vimrc
 
 if [ ! -d tmux/logs ]; then
     mkdir -p tmux/logs
