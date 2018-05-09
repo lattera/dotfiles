@@ -56,6 +56,7 @@ ln -s ~/dotfiles/.tmux.conf .tmux.conf
 ln -s ~/dotfiles/zshrc .zshrc
 ln -s ~/dotfiles/muttrc .muttrc
 ln -s ~/dotfiles/.vimrc .vimrc
+ln -s ~/dotfiles/neomutt-gpg.rc .mutt/gpg.rc
 
 if [ ! -d tmux/logs ]; then
     mkdir -p tmux/logs
