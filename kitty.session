@@ -1,0 +1,7 @@
+new_tab primary
+cd ~
+launch zsh
+
+new_tab secondary
+cd ~
+launch zsh
