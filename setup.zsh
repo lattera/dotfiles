@@ -49,6 +49,8 @@ if [ ! -d .i3 ]; then
     mkdir -p .i3
 fi
 
+[ ! -d .config/kitty ] && mkdir -p .config/kitty
+
 ln -s ~/dotfiles/i3status.${os}.conf .i3status.conf
 ln -s ~/dotfiles/i3config.${os} .i3/config
 ln -s ~/dotfiles/.freebsd_profile .profile
@@ -57,6 +59,7 @@ ln -s ~/dotfiles/zshrc .zshrc
 ln -s ~/dotfiles/muttrc .muttrc
 ln -s ~/dotfiles/.vimrc .vimrc
 ln -s ~/dotfiles/neomutt-gpg.rc .mutt/gpg.rc
+ln -s ~/dotfiles/kitty.conf .config/kitty/kitty.conf
 
 if [ ! -d tmux/logs ]; then
     mkdir -p tmux/logs
